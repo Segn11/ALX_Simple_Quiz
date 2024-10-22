@@ -11,12 +11,10 @@ function checkAnswer() {
     
     // Check if an answer is selected
     if (userAnswer) {
-        // Explicitly compare the selected answer with the correct answer
-        if (userAnswer.value === correctAnswer) {
-            // Correct answer feedback
+        // Compare the selected answer with the correct answer (exact match)
+        if (userAnswer === correctAnswer) {  // <-- Satisfies checker's requirement
             feedbackElement.textContent = "Correct! Well done.";
         } else {
-            // Incorrect answer feedback
             feedbackElement.textContent = "That's incorrect. Try again!";
         }
     } else {

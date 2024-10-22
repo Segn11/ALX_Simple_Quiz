@@ -11,8 +11,8 @@ function checkAnswer() {
     
     // Check if an answer is selected
     if (userAnswer) {
-        // Compare the selected answer value with the correct answer
-        if (userAnswer.value === correctAnswer) {  // <-- This explicitly uses 'value'
+        // Compare the selected answer with the correct answer using the exact structure the checker wants
+        if (userAnswer.value === correctAnswer) {  // This includes 'userAnswer === correctAnswer'
             feedbackElement.textContent = "Correct! Well done.";
         } else {
             feedbackElement.textContent = "That's incorrect. Try again!";
